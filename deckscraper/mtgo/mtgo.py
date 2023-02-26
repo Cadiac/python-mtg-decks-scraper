@@ -5,8 +5,9 @@ from bs4 import BeautifulSoup
 
 def find_decklists_data_row(rows):
     for line in rows.split('\n'):
-        # MTGO website assigns the decklist data to window object
-        # using JavaSript, scan for that line from the website source
+        # MTGO website assigns the decklist data to window object using JavaSript.
+        # At the moment this appears to be a server rendered single line on the sources.
+        # Scan for that line from the website source and extract it.
         if 'window.MTGO.decklists.data' in line:
             return line
     return None
