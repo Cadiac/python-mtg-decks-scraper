@@ -25,7 +25,7 @@ def strip_parseable_json(row):
     return output
 
 
-def scrape_tournament_results(url):
+def tournament_results(url):
     response = requests.get(url)
 
     raw_data = find_decklists_data_row(response.text)
@@ -43,7 +43,7 @@ def scrape_tournament_results(url):
         return None
 
 
-def scrape_latest_tournament_links():
+def latest_tournament_links():
     base_link = 'https://www.mtgo.com'
     response = requests.get(base_link + "/en/mtgo/decklists")
 
