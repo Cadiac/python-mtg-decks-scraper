@@ -45,8 +45,8 @@ def tournament_results(url):
 
 
 def latest_tournament_links():
-    base_link = 'https://www.mtgo.com'
-    response = requests.get(base_link + "/en/mtgo/decklists")
+    base_url = 'https://www.mtgo.com'
+    response = requests.get(base_url + "/en/mtgo/decklists")
 
     soup = BeautifulSoup(response.content, 'html.parser')
     links = []
@@ -73,7 +73,7 @@ def latest_tournament_links():
         year = item.find('span', {'class': 'year'}).text.strip()
 
         # Add the decklist to the list of decklists
-        links.append({'link': base_link + link, 'name': name, 'format': game_format,
+        links.append({'url': base_url + link, 'name': name, 'format': game_format,
                       'day': day, month: 'month', year: 'year'})
 
     return links
