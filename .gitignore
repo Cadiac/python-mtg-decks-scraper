@@ -2,6 +2,8 @@
 *.pyc
 __pycache__/
 venv/
+.eggs
+.pytest_cache
 
 # Distribution / packaging
 build/

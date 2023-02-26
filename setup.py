@@ -8,6 +8,13 @@ setup(
         'beautifulsoup4',
         'requests'
     ],
+    extras_require={
+        'dev': [
+            'pytest',
+            'pytest-pep8',
+            'pytest-cov'
+        ]
+    },
     entry_points={
         'console_scripts': [
             'mtgoscraper = mtgoscraper.main:main'
