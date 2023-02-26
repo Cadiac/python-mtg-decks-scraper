@@ -74,6 +74,6 @@ def latest_tournament_links():
 
         # Add the decklist to the list of decklists
         links.append({'url': base_url + link, 'name': name, 'format': game_format,
-                      'day': day, month: 'month', year: 'year'})
+                      'day': day, 'month': month, 'year': year})
 
     return links
