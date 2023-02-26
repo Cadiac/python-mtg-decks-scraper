@@ -1,8 +1,11 @@
-# Python decklists scraper
+# Python MTGO decklists scraper
 
-## Getting started
+A simple scraper library for extracting decklists from MTGO website.
+
+## Development
 
 ```bash
+$ python -m venv venv
 $ pip install -e '.[dev]'
-
+$ pytest
 ```
