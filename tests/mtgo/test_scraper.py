@@ -1,9 +1,5 @@
-
-import sys
-from pathlib import Path
-sys.path.insert(0, str(Path('deckscraper/').resolve()))
-
 from deckscraper import mtgo
+
 
 def test_scrape_latest_tournament_links():
     results = mtgo.latest_tournament_links()
